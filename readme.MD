@@ -1,11 +1,11 @@
-## build pipeline docker
+# build pipeline docker
 Project created to run a build of your application with docker and push to a configurable registry
 
-# usage:
+## usage:
 python main.py projectname
 
-# It will
+## It will
 run docker-compose up on the project folder
 build dockerfile
 tag it
-push to configurable repository
+push to configurable registry
