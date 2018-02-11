@@ -3,9 +3,7 @@ import sys
 from docker_build import build_and_push
 
 def parse_args(argv):
-    arg_parser = argparse.ArgumentParser(
-        prog=argv[0],
-        formatter_class=argparse.RawDescriptionHelpFormatter)
+    arg_parser = argparse.ArgumentParser(prog=argv[0])
     arg_parser.add_argument('name')
     return arg_parser.parse_args()
 
