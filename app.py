@@ -10,8 +10,12 @@ def parse_args(argv):
 
 def main(argv):
     args = parse_args(argv)
-    print run_build(args.name)
-    # tag_and_push(name=args.name)
+    status = run_build(args.name)
+    if status != 0:
+        print "build failing"
+        sys.exit(status)
+    else:
+        tag_and_push(name=args.name)
 
 if __name__ == "__main__":
     main(sys.argv)
